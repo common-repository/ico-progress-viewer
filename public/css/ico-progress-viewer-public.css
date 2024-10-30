@@ -1,0 +1,51 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.hide {
+    display: none;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.countdown {
+    font-size: xx-large;
+    font-weight: bold;
+    font-feature-settings: "tnum";
+    margin: 1em 0;
+}
+
+.contract-address {
+    font-family: monospace;
+}
+
+.progress-bar-outer {
+    border-radius: 3px;
+    height: 40px;
+    background-color: lightgray;
+    width: 100%;
+    position: relative;
+    margin: 1em 0;
+}
+
+.progress-bar-inner {
+    border-radius: 3px;
+    height: 100%;
+    width: 0;
+    transition: width 1s ease;
+    background: linear-gradient(to bottom, rgb(66, 171, 230) 0%, rgb(34, 133, 210) 100%);
+}
+
+.progress-bar-outer:after {
+    content: attr(data-progress-value);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 40px;
+}
